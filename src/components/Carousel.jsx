@@ -1,20 +1,23 @@
-import { Cards } from "./Cards";
-import Foto1 from './../assets/foto1.jpg'
-import Foto2 from './../assets/foto2.jpg'
-import Foto3 from './../assets/foto3.jpg'
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { ComentsCards } from './ComentsCards';
+import 'swiper/css';
 
 
 
 export function Carousel(){
     return(
-       <div>
-            <div className="flex flex-col items-center mt-[110px]">                
-                <h1 className="py-4 text-2xl text-blue-900 font-bold">Top Destinations</h1>
-            </div>
+        <Swiper
+        spaceBetween={100}
+        slidesPerView={1}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
 
-            <Cards img={Foto1} cidade ={"Paris, France"} valor={"$5,42k"}/>
-            <Cards img={Foto2} cidade ={"Barcelona, Spain"} valor={"$8,75k"}/>
-            <Cards img={Foto3} cidade ={"Lisboa, Portugal"} valor={"$6,35k"}/>
-       </div> 
+            <SwiperSlide><ComentsCards nome={"Gabriel Miranda"} comentario={"“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”"}/></SwiperSlide>
+            <SwiperSlide><ComentsCards nome={"Felipe Antunes"} comentario={"I recently booked a trip through this travel company, and their customer service was outstanding. From helping me choose the perfect destination to handling all the arrangements seamlessly, "}/></SwiperSlide>
+            <SwiperSlide><ComentsCards nome={"Matheus Miranda"} comentario={"I had a few hiccups during my trip, but the travel company’s support team was incredibly responsive and resolved the issues quickly. It's reassuring to know that they stand by their clients and provide excellent support even while you're traveling."}/></SwiperSlide>
+            <SwiperSlide><ComentsCards nome={"Italo Miranda"} comentario={"I was impressed with the range of options this travel company offers. Whether you're looking for a luxurious getaway or a budget-friendly adventure, they have something for everyone. Their attention to detail and personalized service"}/></SwiperSlide>
+        </Swiper>
     )
 }
