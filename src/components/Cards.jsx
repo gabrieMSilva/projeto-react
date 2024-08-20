@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Modal from 'react-modal'
-
-
+import Vetor from '../assets/Decore.png'
+ 
 Modal.setAppElement('#root');
 
 
@@ -19,12 +19,15 @@ export function Cards(props){
     }
     return(
         <div className="flex justify-center mt-9 ">
-            <div className="w-[315px] h-[360px] bg-slate-100 rounded-lg drop-shadow-2xl hover:scale-110 duration-150">
+            
+           
+            <div className="w-[315px] h-[457px] bg-slate-100 rounded-lg drop-shadow-2xl hover:scale-110 duration-150">
                 <img src={props.img} alt="Foto" className='h-[80%] w-full rounded-md '/>
                 <div className="flex w-full justify-between p-3">
                      <h1 className="text-blue-900 font-semibold text-lg">{props.cidade}</h1>
                      <h1 className="text-blue-900 font-semibold text-md">{props.valor}</h1>
                 </div>
+               
                 <div className="flex justify-center">
 
                     <button onClick={openModal} className="py-1 px-3 bg-orange-500 rounded-md text-white font-semibold drop-shadow-md">More</button>
@@ -45,9 +48,8 @@ export function Cards(props){
                     
                     
                 </div>
-
-
-            </div>
+                
+             </div>
         </div>
     )
 }
