@@ -5,6 +5,7 @@ export function Main(){
     return(
         <div className="mt-[130px] p-3">
             <div className='flex flex-row-reverse justify-center items-center md:xl:px-[24rem] gap-2'>
+                
                 <img src={Viajante} alt="Viajante" className='md:sm:flex hidden'/>
 
                 <div>

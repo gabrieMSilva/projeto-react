@@ -36,14 +36,15 @@ export function Forms() {
   
   return (
 
-    <div className='mt-5 justify-center flex'>
+    <div className='mt-5 justify-center flex md:xl:mt-20 md:xl:mb-10 mb-10'>
 
-    <div className="flex flex-col mt-5 p-5 gap-4 items-center w-[425px] h-[370px] bg-violet-100 rounded-md">
-      <h1 className="text-2xl font-bold text-white">Contato</h1>
+    <div className="flex flex-col mt-5 p-5 gap-4 items-center w-[425px] h-[490px] bg-indigo-100 rounded-lg md:xl:w-[80%]">
+      <h1 className="text-2xl font-bold text-gray-700 py-3">Subscribe to get information, latest news and other
+      interesting offers about Cobham</h1>
 
-      <form className="flex flex-col gap-4" onSubmit={sendEmail}>
+      <form className="flex flex-col gap-4 md:xl:w-[1280px]" onSubmit={sendEmail}>
         <input 
-          className="py-4 px-2 rounded-md w-80"
+          className="py-4 px-2 rounded-md"
           type="text"
           placeholder="Digite seu nome"
           onChange={(e) => setName(e.target.value)}
@@ -65,7 +66,7 @@ export function Forms() {
           value={message}
         />
 
-        <input className="mt-3 py-0.5 px-1 bg-orange-500 rounded-md text-white font-semibold text-lg" type="submit" value="Enviar" />
+        <input className=" cursor-pointer mt-3 py-0.5 px-1 bg-orange-500 rounded-md text-white font-semibold text-lg" type="submit" value="Enviar" />
       </form>
 
     </div>
